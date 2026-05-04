@@ -1,0 +1,21 @@
+<html><head><title>Permit Cost</title><link rel="stylesheet" href="../style.css">    <meta name="google-site-verification" content="PkLa_ViOo6FAHpvh8SacceMb95o9tePRdrqLNBz9X1M" />
+</head>
+<body>
+<h1>Filming Permit Cost Calculator</h1>
+
+<label>Days:</label><input id="days" type="number"><br>
+<label>Cost per day ($):</label><input id="cost" type="number"><br>
+
+<button onclick="calc()">Estimate</button>
+<p id="res"></p>
+
+<script>
+function calc(){
+let d=+document.getElementById('days').value||0;
+let c=+document.getElementById('cost').value||0;
+document.getElementById('res').innerText="Estimated cost: $"+(d*c).toFixed(2);
+}
+</script>
+
+<a href="../index.html">Back</a>
+</body></html>

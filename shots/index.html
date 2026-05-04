@@ -1,0 +1,22 @@
+<html><head><title>Shots per Minute</title><link rel="stylesheet" href="../style.css">    <meta name="google-site-verification" content="PkLa_ViOo6FAHpvh8SacceMb95o9tePRdrqLNBz9X1M" />
+</head>
+<body>
+<h1>Shots per Minute Calculator</h1>
+<p>Estimate pacing of your film.</p>
+
+<label>Total Shots:</label><input id="shots" type="number"><br>
+<label>Video Length (minutes):</label><input id="length" type="number"><br>
+
+<button onclick="calc()">Calculate</button>
+<p id="res"></p>
+
+<script>
+function calc(){
+let s=+document.getElementById('shots').value||0;
+let l=+document.getElementById('length').value||1;
+document.getElementById('res').innerText="Shots per minute: "+(s/l).toFixed(2);
+}
+</script>
+
+<a href="../index.html">Back</a>
+</body></html>

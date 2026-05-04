@@ -1,0 +1,23 @@
+<html><head><title>Storyboard Calculator</title><link rel="stylesheet" href="../style.css">    <meta name="google-site-verification" content="PkLa_ViOo6FAHpvh8SacceMb95o9tePRdrqLNBz9X1M" />
+</head>
+<body>
+<h1>Storyboard Planning Calculator</h1>
+<p>Estimate storyboard duration.</p>
+
+<label>Scenes:</label><input id="scenes" type="number"><br>
+<label>Avg seconds per scene:</label><input id="sec" type="number"><br>
+
+<button onclick="calc()">Calculate</button>
+<p id="res"></p>
+
+<script>
+function calc(){
+let s=+document.getElementById('scenes').value||0;
+let sec=+document.getElementById('sec').value||0;
+let total=s*sec/60;
+document.getElementById('res').innerText="Estimated runtime: "+total.toFixed(2)+" minutes";
+}
+</script>
+
+<a href="../index.html">Back</a>
+</body></html>
